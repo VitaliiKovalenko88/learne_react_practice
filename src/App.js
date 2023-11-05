@@ -1,16 +1,25 @@
-import Panel from './components/Panel';
-import Profile from './components/Profile';
+import { Alert } from "./components/Alert/Alert";
 
 
-function App() {
+const App = () => {
   return (
-    <div>
-    <Panel title="User profile">
-      <Profile name="Mango" email="mango@mail.com" />
-    </Panel>
-
-  </div>
+    <>
+      <Alert variant="info">
+        Would you like to browse our recommended products?
+      </Alert>
+      <Alert variant="error">
+        There was an error during your last transaction
+      </Alert>
+      <Alert variant="success">
+        Payment received, thank you for your purchase
+      </Alert>
+      <Alert variant="warning">
+        Please update your profile contact information
+      </Alert>
+    </>
   );
-}
+};
 
 export default App;
+
+
