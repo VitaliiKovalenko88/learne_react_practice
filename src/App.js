@@ -1,25 +1,22 @@
-import { Alert } from "./components/Alert/Alert";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Products } from "./pages/Products";
+import { NotFound } from "./pages/NotFound";
+import { ProductDetails } from "./pages/ProductDetails";
 
 
-const App = () => {
+export const App = () => {
   return (
-    <>
-      <Alert variant="info">
-        Would you like to browse our recommended products?
-      </Alert>
-      <Alert variant="error">
-        There was an error during your last transaction
-      </Alert>
-      <Alert variant="success">
-        Payment received, thank you for your purchase
-      </Alert>
-      <Alert variant="warning">
-        Please update your profile contact information
-      </Alert>
-    </>
+    <div>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:productId" element={<ProductDetails />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
   );
 };
-
-export default App;
-
-
