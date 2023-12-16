@@ -1,7 +1,5 @@
-import { createStore } from "redux"; // Початкове значення стану Redux для кореневого редюсера,
-// якщо не передати параметр preloadedState. * 
-import { devToolsEnhancer } from "@redux-devtools/extension";
-import { rootReducer } from "./reducer";
+import { configureStore } from "@reduxjs/toolkit";
+import { tasksReducer, filtersReducer } from "./reducer";
 
 // const initialState = {
 //   tasks: [
@@ -20,5 +18,9 @@ import { rootReducer } from "./reducer";
 // тільки повертає отриманий стан
 
 
-const enhancer = devToolsEnhancer();
-export const store = createStore(rootReducer, enhancer);
+export const store = configureStore({
+  reducer: {
+    tasks: tasksReducer,
+    filters: filtersReducer,
+  },
+});
