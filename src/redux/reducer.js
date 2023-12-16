@@ -17,15 +17,39 @@ const initialState = {
 export const rootReducer = (state = initialState, action) => {
   // Редюсер розрізняє екшени за значенням властивості type
   switch (action.type) {
-    case "tasks/addTask": {
+    case "tasks/addTask":
       return {
         ...state,
         tasks: [
           ...state.tasks,
           action.payload,
-        ]
-      }
-    }
+        ],
+      };
+
+    case "tasks/deleteTask":
+      return {
+        ...state,
+        tasks: state.tasks.filter(task => [task.id](task.id) !== action.payload),
+      };
+    case "tasks/toggleCompleted":
+      return {
+        ...state,
+        tasks: state.tasks.map(task => {
+          if ([task.id](task.id) !== action.payload) {
+            return task;
+          };
+          return { ...task, completed: !task.completed };
+        }),
+      };
+    case "filters/setStatusFilter":
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          status: action.payload,
+        },
+      };
+
     // Залежно від типу екшену виконуватиметься різна логіка
     default:
       // Кожен редюсер отримує всі екшени, відправлені в стор.
