@@ -1,6 +1,6 @@
 import { Layout } from "./Layout/Layout";
 import { useEffect } from "react";
-import { AppBar } from "./AppBar/AppBar";
+import { AppBar } from "./AppBar/AppBar.jsx";
 import { TaskForm } from "./TaskForm/TaskForm";
 import { TaskList } from "./TaskList/TaskList";
 import { fetchTasks } from "../redux/operations";
