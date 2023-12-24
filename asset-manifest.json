@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/learne_react_practice/static/css/main.a38b1f6e.css",
+    "main.js": "/learne_react_practice/static/js/main.ee5385e7.js",
+    "index.html": "/learne_react_practice/index.html",
+    "main.a38b1f6e.css.map": "/learne_react_practice/static/css/main.a38b1f6e.css.map",
+    "main.ee5385e7.js.map": "/learne_react_practice/static/js/main.ee5385e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a38b1f6e.css",
+    "static/js/main.ee5385e7.js"
+  ]
+}
