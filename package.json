@@ -27,6 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "npm run lint:js",
     "lint:js": "eslint src/**/*.{js,jsx}"
   },
   "eslintConfig": {
@@ -49,6 +50,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint": "^8.56.0",
     "prop-types": "^15.8.1"
   }
 }
